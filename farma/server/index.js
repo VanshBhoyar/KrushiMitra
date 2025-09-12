@@ -23,10 +23,10 @@ const aiClient = new OpenAI({
 app.use(cors({
   origin: [
     "http://localhost:8080", // local dev
-    "http://farmai-chat-akshay.surge.sh" // deployed frontend
+    "https://farmai-chat-akshay.surge.sh" // ✅ FIXED: use https
   ],
   methods: ["GET", "POST", "OPTIONS"],
-  credentials: true,
+  credentials: true,
 }));
 
 app.use(bodyParser.json());
